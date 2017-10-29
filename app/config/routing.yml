@@ -1,3 +1,16 @@
 app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+# Al definir las rutas en los controladores estas rutas son innecesarias, no utilizar
+area_index:
+    path:      /areafootball/
+    defaults:  { _controller: AppBundle:AreaFootball:index}
+fixtures_index:
+    path:      /areafootball/fixtures
+    defaults:  { _controller: AppBundle:Fixtures:index}
+match_index:
+    path:      /areafootball/match
+    defaults:  { _controller: AppBundle:Match:index}
+match_read:
+    path:      /areafootball/match/{id_match}
+    defaults:  { _controller: AppBundle:Match:read}
