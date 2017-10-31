@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2fa99c5134c1a9b57280a4278591a4b7",
+    "content-hash": "3ee36f1c03e4c16818193f18c7b6cdde",
     "packages": [
         {
             "name": "BlackrockDigital/startbootstrap-sb-admin-2",

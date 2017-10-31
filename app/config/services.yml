@@ -33,3 +33,14 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
+    AppBundle\Services\Serializer\SerializerHelper:
+      public: true
+      arguments: ["null"]
+
+    AppBundle\Services\Data\DataHelper:
+      public: true
+      arguments: ["null"]
+
+    AppBundle\Services\WebService\SimulateWS:
+      public: true
+      arguments: ['@AppBundle\Services\Serializer\SerializerHelper', '@AppBundle\Services\Data\DataHelper']

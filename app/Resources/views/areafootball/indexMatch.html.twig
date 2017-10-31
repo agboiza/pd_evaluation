@@ -3,10 +3,12 @@
     Match
 {% endblock %}
 {% block content %}
-    {{ include('areafootball/basic/fixtures.html.twig', fixtures_entries)}}
+    {% dump(fixtures_entries) %}
+    {{ include('areafootball/basic/fixtures.html.twig', {"fixture":fixtures_entries})}}
 {% endblock %}
 {% block contentupdate %}
-    {{ include('areafootball/basic/match.html.twig', match_entries)}}
+    {% dump(match_entries) %}
+    {{ include('areafootball/basic/match.html.twig', {"match":match_entries})}}
 {% endblock %}
 {% block stylesheets %}
     <link href="{{ asset('css/areafootball/index.css') }}" rel="stylesheet" />

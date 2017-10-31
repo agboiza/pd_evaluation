@@ -7,9 +7,9 @@
                 </div>
                 <div class="panel-body">
                     <h4>Players:</h4>
-                    {% for player in players %}
+                    {% for player in match.players %}
                         <p> {{ player.team }}:
-                            {% for p in player.players %}
+                            {% for p in player.player %}
                                 {{ p }}
                             {% endfor %}
                         </p>
@@ -17,14 +17,14 @@
                 </div>
                 <div class="panel-body">
                     <h4>Goals:</h4>
-                    {% for goal in goals %}
-                        <p> {{ goal.player }} - {{ goal.time |date("d/m/Y h:m:s", "Europe/Paris")}}</p>
+                    {% for goal in match.goals %}
+                        <p> {{ goal.player }} - {{ goal.time }}</p>
                     {% endfor %}
                 </div>
                 <div class="panel-body">
                     <h4>Yellow Cards:</h4>
-                    {% for ye in yellowcards %}
-                        <p> {{ ye.player }} - {{ ye.time |date("d/m/Y h:m:s", "Europe/Paris")}}</p>
+                    {% for ye in match.yellowcards %}
+                        <p> {{ ye.player }} - {{ ye.time }}</p>
                     {% endfor %}
                 </div>
             </div>
